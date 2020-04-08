@@ -15,7 +15,7 @@ def user_flag(dd_status, uname):
         cookies = dingding.dd_login_status(uname, has_dd=True)
     else:
         if (input("是否保存钉钉帐户密码，保存后可后免登陆学习(Y/N) ")) not in ["y", "Y"]:
-            driver_login = mydriver.Mydriver(nohead=False)
+            driver_login = mydriver.Mydriver(noimg=False,nohead=False)
             cookies = driver_login.login()
         else:
             cookies = dingding.dd_login_status(uname)
@@ -172,6 +172,7 @@ def video(cookies, v_log, each):
 
 if __name__ == '__main__':
     #  0 读取版本信息
+    print("***感谢原作者Alivon的开源代码，本程序只做Python学习之用，请勿用做其他用途***")
     start_time = time.time()
     info_shread = threads.MyThread("获取更新信息...", version.up_info)
     info_shread.start()
