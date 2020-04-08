@@ -54,7 +54,7 @@ class Mydriver:
 
     def login(self):
         print("正在打开二维码登陆界面,请稍后")
-        self.driver.get("https://pc.xuexi.cn/points/login.html")
+        self.driver.get("https://pc.xuexi.cn/points/login.html?ref=https://pc.xuexi.cn/points/my-study.html")
         try:
             remover = WebDriverWait(self.driver, 30, 0.2).until(
                 lambda driver: driver.find_element_by_class_name("redflagbox"))
